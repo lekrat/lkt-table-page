@@ -17,7 +17,7 @@ const props = defineProps({
     resource: {type: String, default: ''},
     title: {type: String, default: ''},
     columns: {type: Array as PropType<LktTableColumn[]>, default: (): LktTableColumn[] => []},
-    filters: {type: Array, default: () => ({})},
+    filters: {type: Object as PropType<LktObject>, default: () => ({})},
 });
 
 const Page = ref(props.page),

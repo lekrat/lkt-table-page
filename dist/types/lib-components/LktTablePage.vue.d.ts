@@ -1,5 +1,6 @@
 import { PropType } from "vue";
 import { LktTableColumn } from "lkt-table/dist/types/instances/LktTableColumn";
+import { LktObject } from "lkt-ts-interfaces";
 declare const _default: {
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
         page: {
@@ -19,7 +20,7 @@ declare const _default: {
             default: () => LktTableColumn[];
         };
         filters: {
-            type: ArrayConstructor;
+            type: PropType<LktObject>;
             default: () => {};
         };
     }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
@@ -40,13 +41,13 @@ declare const _default: {
             default: () => LktTableColumn[];
         };
         filters: {
-            type: ArrayConstructor;
+            type: PropType<LktObject>;
             default: () => {};
         };
     }>>, {
         columns: LktTableColumn[];
         title: string;
-        filters: unknown[];
+        filters: {};
         page: number;
         resource: string;
     }, true, {}, {}, {
@@ -74,13 +75,13 @@ declare const _default: {
             default: () => LktTableColumn[];
         };
         filters: {
-            type: ArrayConstructor;
+            type: PropType<LktObject>;
             default: () => {};
         };
     }>>, {}, {}, {}, {}, {
         columns: LktTableColumn[];
         title: string;
-        filters: unknown[];
+        filters: {};
         page: number;
         resource: string;
     }>;
@@ -105,13 +106,13 @@ declare const _default: {
         default: () => LktTableColumn[];
     };
     filters: {
-        type: ArrayConstructor;
+        type: PropType<LktObject>;
         default: () => {};
     };
 }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
     columns: LktTableColumn[];
     title: string;
-    filters: unknown[];
+    filters: {};
     page: number;
     resource: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {

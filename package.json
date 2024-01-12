@@ -5,7 +5,6 @@
   "main": "src/index.ts",
   "module": "src/index.ts",
   "files": [
-    "lkt-table-page.css",
     "dist/*",
     "src/**/*.vue"
   ],

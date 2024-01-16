@@ -1,4 +1,6 @@
 .lkt-table-page {
-    display: block;
+    display: flex;
     width: 100%;
+    flex-direction: column;
+    gap: var(--gap);
 }

@@ -11,6 +11,10 @@ declare const _default: {
             type: StringConstructor;
             default: string;
         };
+        noResultsText: {
+            type: StringConstructor;
+            default: string;
+        };
         title: {
             type: StringConstructor;
             default: string;
@@ -32,6 +36,10 @@ declare const _default: {
             type: StringConstructor;
             default: string;
         };
+        noResultsText: {
+            type: StringConstructor;
+            default: string;
+        };
         title: {
             type: StringConstructor;
             default: string;
@@ -50,6 +58,7 @@ declare const _default: {
         filters: {};
         page: number;
         resource: string;
+        noResultsText: string;
     }, true, {}, {}, {
         P: {};
         B: {};
@@ -63,6 +72,10 @@ declare const _default: {
             default: number;
         };
         resource: {
+            type: StringConstructor;
+            default: string;
+        };
+        noResultsText: {
             type: StringConstructor;
             default: string;
         };
@@ -84,6 +97,7 @@ declare const _default: {
         filters: {};
         page: number;
         resource: string;
+        noResultsText: string;
     }>;
     __isFragment?: never;
     __isTeleport?: never;
@@ -94,6 +108,10 @@ declare const _default: {
         default: number;
     };
     resource: {
+        type: StringConstructor;
+        default: string;
+    };
+    noResultsText: {
         type: StringConstructor;
         default: string;
     };
@@ -115,13 +133,16 @@ declare const _default: {
     filters: {};
     page: number;
     resource: string;
+    noResultsText: string;
 }, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
     $slots: Record<any, {
         item: any;
         value: any;
         column: any;
     }> & {
+        title: (_: {}) => any;
         buttons: (_: {}) => any;
+        filters: (_: {}) => any;
     };
 });
 export default _default;

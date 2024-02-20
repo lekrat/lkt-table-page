@@ -1,4 +1,4 @@
-import { defineComponent as R, useSlots as $, ref as c, computed as y, resolveComponent as k, openBlock as l, createElementBlock as n, unref as d, toDisplayString as b, createCommentVNode as o, renderSlot as m, createBlock as h, createSlots as x, renderList as B, withCtx as A, createVNode as O, nextTick as U } from "vue";
+import { defineComponent as R, useSlots as $, ref as c, computed as y, resolveComponent as k, openBlock as l, createElementBlock as a, unref as d, toDisplayString as b, createCommentVNode as o, renderSlot as m, createBlock as h, createSlots as x, renderList as B, withCtx as A, createVNode as O, nextTick as U } from "vue";
 import j from "lkt-table";
 import D from "lkt-paginator";
 const E = { class: "lkt-table-page" }, K = { key: 0 }, q = { key: 0 }, z = {
@@ -31,29 +31,29 @@ const E = { class: "lkt-table-page" }, K = { key: 0 }, q = { key: 0 }, z = {
       r.value = t, i.value = !1, p.value = !0;
     }, T = () => U(() => i.value = !0);
     return (t, s) => {
-      const P = k("lkt-loader"), C = k("lkt-table"), N = k("lkt-paginator");
-      return l(), n("section", E, [
-        e.title || d(u).title ? (l(), n("header", K, [
-          e.title ? (l(), n("h2", q, b(e.title), 1)) : o("", !0),
+      const C = k("lkt-loader"), P = k("lkt-table"), N = k("lkt-paginator");
+      return l(), a("section", E, [
+        e.title || d(u).title ? (l(), a("header", K, [
+          e.title ? (l(), a("h2", q, b(e.title), 1)) : o("", !0),
           d(u).title ? m(t.$slots, "title", { key: 1 }) : o("", !0)
         ])) : o("", !0),
-        d(u).buttons ? (l(), n("div", z, [
+        d(u).buttons ? (l(), a("div", z, [
           m(t.$slots, "buttons")
         ])) : o("", !0),
-        p.value && d(u).filters ? (l(), n("div", F, [
+        p.value && d(u).filters ? (l(), a("div", F, [
           m(t.$slots, "filters")
         ])) : o("", !0),
-        i.value ? (l(), h(P, { key: 3 })) : o("", !0),
-        !i.value && r.value.length > 0 ? (l(), h(C, {
+        i.value ? (l(), h(C, { key: 3 })) : o("", !0),
+        !i.value && r.value.length > 0 ? (l(), h(P, {
           key: 4,
           modelValue: r.value,
-          "onUpdate:modelValue": s[0] || (s[0] = (a) => r.value = a),
+          "onUpdate:modelValue": s[0] || (s[0] = (n) => r.value = n),
           columns: e.columns
         }, x({ _: 2 }, [
-          B(_.value, (a) => ({
-            name: a,
+          B(_.value, (n) => ({
+            name: n,
             fn: A((f) => [
-              m(t.$slots, a, {
+              m(t.$slots, n, {
                 item: f.item,
                 value: f.value,
                 column: f.column
@@ -61,10 +61,10 @@ const E = { class: "lkt-table-page" }, K = { key: 0 }, q = { key: 0 }, z = {
             ])
           }))
         ]), 1032, ["modelValue", "columns"])) : o("", !0),
-        !i.value && r.value.length === 0 ? (l(), n("div", G, b(e.noResultsText), 1)) : o("", !0),
+        !i.value && r.value.length === 0 ? (l(), a("div", G, b(e.noResultsText), 1)) : o("", !0),
         O(N, {
           modelValue: g.value,
-          "onUpdate:modelValue": s[1] || (s[1] = (a) => g.value = a),
+          "onUpdate:modelValue": s[1] || (s[1] = (n) => g.value = n),
           resource: e.resource,
           filters: e.filters,
           onResults: L,
@@ -73,8 +73,7 @@ const E = { class: "lkt-table-page" }, K = { key: 0 }, q = { key: 0 }, z = {
       ]);
     };
   }
-});
-const W = {
+}), W = {
   install: (e) => {
     e.component("lkt-table-page") === void 0 && e.component("lkt-table-page", I), e.component("lkt-table") === void 0 && e.use(j), e.component("lkt-paginator") === void 0 && e.use(D);
   }

@@ -1,6 +1,6 @@
 {
   "name": "lkt-table-page",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "keywords": [
     "lkt",
@@ -24,7 +24,7 @@
     "./styles": "./build/style.css"
   },
   "types": "./dist/lkt-table-page.d.ts",
-  "files": ["dist/*"],
+  "files": ["dist/*", "src/**/*.vue"],
   "license": "MIT",
   "sideEffects": false,
   "scripts": {

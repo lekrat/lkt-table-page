@@ -14,6 +14,7 @@ export default {
         lib: {
             entry: `${ src }/index.ts`,
             name: 'LktTablePage',
+            fileName: 'build',
             formats: ['es']
         },
         outDir,

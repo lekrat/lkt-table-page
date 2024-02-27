@@ -5,7 +5,7 @@ export default {name: "LktTablePage", inheritAttrs: false}
 <script lang="ts" setup>
 // Emits
 import {computed, nextTick, PropType, ref, useSlots} from "vue";
-import {LktTableColumn} from "lkt-table/dist/types/instances/LktTableColumn";
+import {LktTableColumn} from "lkt-table";
 import {LktObject} from "lkt-ts-interfaces";
 
 // Slots
@@ -38,7 +38,8 @@ const columnKeys = computed((): string[] => {
     });
 
 const onResults = (r: any) => {
-        items.value = r;
+        //@ts-ignore
+        if (Array.isArray(r)) items.value = r;
         loading.value = false;
         firstLoadReady.value = true;
     },

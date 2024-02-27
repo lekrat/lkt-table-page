@@ -1,6 +1,6 @@
 {
   "name": "lkt-table-page",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "",
   "keywords": [
     "lkt",
@@ -16,19 +16,19 @@
     "ui"
   ],
   "type": "module",
-  "module": "./dist/lkt-table-page.js",
+  "module": "./dist/build.js",
   "exports": {
     ".": {
-      "import": "./dist/lkt-table-page.js"
+      "import": "./dist/build.js"
     },
-    "./styles": "./build/style.css"
+    "./styles": "./dist/style.css"
   },
-  "types": "./dist/lkt-table-page.d.ts",
+  "types": "./dist/index.d.ts",
   "files": ["dist/*", "src/**/*.vue"],
   "license": "MIT",
   "sideEffects": false,
   "scripts": {
-    "build": "vite build && tsc --project tsconfig.json && cp build/style.css dist/style.css"
+    "build": "rm -rf dist/*; vue-tsc --declaration --emitDeclarationOnly; vite build; tsc --project tsconfig.build.json; cp build/* dist/"
   },
   "author": "Antonio Ibáñez",
   "devDependencies": {

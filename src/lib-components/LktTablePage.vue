@@ -1,7 +1,3 @@
-<script lang="ts">
-export default {name: "LktTablePage", inheritAttrs: false}
-</script>
-
 <script lang="ts" setup>
 // Emits
 import {computed, nextTick, PropType, ref, useSlots} from "vue";
@@ -25,7 +21,8 @@ const Page = ref(props.page),
     items = ref([]),
     refreshComputedProperties = ref(true),
     loading = ref(true),
-    firstLoadReady = ref(false);
+    firstLoadReady = ref(false),
+    paginator = ref(null);
 
 const columnKeys = computed((): string[] => {
         return props.columns.map(c => c.key);
@@ -43,7 +40,15 @@ const onResults = (r: any) => {
         loading.value = false;
         firstLoadReady.value = true;
     },
-    onLoading = () => nextTick(() => loading.value = true);
+    onLoading = () => nextTick(() => loading.value = true),
+    doRefresh = () => {
+        //@ts-ignore
+        paginator.value.doRefresh();
+    };
+
+defineExpose({
+    doRefresh
+})
 </script>
 
 
@@ -84,6 +89,7 @@ const onResults = (r: any) => {
         </div>
 
         <lkt-paginator
+            ref="paginator"
             v-model="Page"
             v-bind:resource="resource"
             v-bind:filters="filters"

@@ -1,4 +1,4 @@
-export { I as default };
-declare namespace I {
+export { M as default };
+declare namespace M {
     function install(t: any): void;
 }

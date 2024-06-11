@@ -1,7 +1,7 @@
 import { App, Plugin } from 'vue';
 
 import { default as page } from './lib-components/LktTablePage.vue';
-import "./../lkt-table-page.css";
+import "../style.css";
 
 
 const LktTablePage: Plugin = {

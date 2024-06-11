@@ -1,4 +1,4 @@
 import { Plugin } from 'vue';
-import "./../lkt-table-page.css";
+import "../style.css";
 declare const LktTablePage: Plugin;
 export default LktTablePage;

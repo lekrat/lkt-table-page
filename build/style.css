@@ -1,1 +1,1 @@
-.lkt-table-page{display:flex;width:100%;flex-direction:column;gap:var(--gap);overflow-x:auto}
+.lkt-table-page{display:flex;width:100%;flex-direction:column;gap:var(--lkt-table-page-gap)}

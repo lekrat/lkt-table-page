@@ -37,6 +37,7 @@ export default {
                 globals: {
                     vue: 'Vue',
                     axios: 'axios',
+                    "lkt-paginator": 'LktPaginator',
                     "lkt-tools": 'LktTools',
                     "lkt-events": 'LktEvents',
                     "lkt-button": 'LktButton',
